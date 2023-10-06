@@ -77,7 +77,7 @@ Resources:
       GlueVersion: !Ref GlueVersion
       MaxRetries: !Ref MaxRetries
       NumberOfWorkers: !Ref NumberOfWorkers
-      Role: arn:aws:iam::Labid:role/LabRole
+      Role: arn:aws:iam::470850982447:role/LabRole
       Timeout: !Ref Timeout
       WorkerType: !Ref WorkerType
       Command:
@@ -92,7 +92,7 @@ Resources:
       Targets:
         S3Targets:
           - Path: s3://datalake-rawzone-grp04/datalake-8-sep/
-      Role: arn:aws:iam::Labid:role/LabRole
+      Role: arn:aws:iam::470850982447:role/LabRole
 
   LambdaFunction:
     Type: AWS::Lambda::Function
@@ -112,7 +112,7 @@ Resources:
               }
 
       Handler: index.lambda_handler
-      Role: arn:aws:iam::517977851664:role/LabRole
+      Role: arn:aws:iam::470850982447:role/LabRole
       Runtime: python3.11
       FunctionName: "LambdaforWorkflow"
 
