@@ -82,7 +82,7 @@ Resources:
       WorkerType: !Ref WorkerType
       Command:
         Name: glueetl
-        ScriptLocation: s3://scriftfile/Datawarehouse_script.py
+        ScriptLocation: s3://scriftfile11/Datawarehouse_script.py
 
   GlueCrawler:
     Type: AWS::Glue::Crawler

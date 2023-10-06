@@ -15,7 +15,7 @@ jobs:
 
       - name: Upload Script to S3 Bucket
         run: |
-          aws s3 cp .github/workflows/Datawarehouse_script.py s3://scriftfile/
+          aws s3 cp .github/workflows/Datawarehouse_script.py s3://scriftfile11/
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -49,5 +49,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{ vars.AWS_DEFAULT_REGION }}
           AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
+
+
 
 
