@@ -47,7 +47,7 @@ Resources:
     Type: AWS::S3::Bucket
     DependsOn: LambdaInvokePermission
     Properties:
-      BucketName: pythonscriptfile104-grp4
+      BucketName: pythonscriptfile104-grp444
       NotificationConfiguration:
         LambdaConfigurations:
           - Event: s3:ObjectCreated:*
