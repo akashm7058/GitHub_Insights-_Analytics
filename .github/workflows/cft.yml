@@ -35,19 +35,19 @@ Resources:
     Type: AWS::S3::Bucket
     DeletionPolicy: Delete
     Properties:
-      BucketName: datalake-rawzone-grp04
+      BucketName: datalake-rawzone-grp041
   
   MyS3Bucket1:
     Type: AWS::S3::Bucket
     DeletionPolicy: Delete
     Properties:
-      BucketName: output-grp04
+      BucketName: output-grp041
 
   DumpingBucket:
     Type: AWS::S3::Bucket
     DependsOn: LambdaInvokePermission
     Properties:
-      BucketName: pythonscriptfile-grp4
+      BucketName: pythonscriptfile104-grp4
       NotificationConfiguration:
         LambdaConfigurations:
           - Event: s3:ObjectCreated:*
@@ -91,7 +91,7 @@ Resources:
       DatabaseName: !Ref GlueDatabase
       Targets:
         S3Targets:
-          - Path: s3://datalake-rawzone-grp04/datalake-8-sep/
+          - Path: s3://datalake-rawzone-grp041/datalake-8-sep/
       Role: arn:aws:iam::470850982447:role/LabRole
 
   LambdaFunction:
@@ -124,7 +124,7 @@ Resources:
       Action: lambda:InvokeFunction
       Principal: "s3.amazonaws.com"
       SourceAccount: !Ref AWS::AccountId
-      SourceArn: "arn:aws:s3:::pythonscriptfile-grp4"
+      SourceArn: "arn:aws:s3:::pythonscriptfile-grp411"
 
   WorkflowStartTrigger:
     Type: AWS::Glue::Trigger
@@ -164,4 +164,4 @@ Resources:
         PublishCloudWatchMetricsEnabled: true
         RequesterPaysEnabled: true
         ResultConfiguration:
-          OutputLocation: s3://output-grp04/
+          OutputLocation: s3://output-grp041/
