@@ -18,9 +18,9 @@ Parameters:
     Type: String
     Description: Glue worker type for the job
 
-  GlueVersion:
-    Type: String
-    Description: GlueVersion for the job
+  # GlueVersion:
+  #   Type: String
+  #   Description: GlueVersion for the job
 
   MaxConcurrentRuns:
     Type: Number
