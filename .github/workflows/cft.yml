@@ -74,7 +74,7 @@ Resources:
       Name: data-pipeline-ingest-grp04
       Description: Ingests data from s3 and writes it as a parquet file to the data lake
       ExecutionClass: FLEX
-      GlueVersion: Glue 4.O
+      GlueVersion: Glue 4.0
       MaxRetries: !Ref MaxRetries
       NumberOfWorkers: !Ref NumberOfWorkers
       Role: arn:aws:iam::854575696489:role/LabRole
