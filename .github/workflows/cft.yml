@@ -18,9 +18,9 @@ Parameters:
     Type: String
     Description: Glue worker type for the job
 
-  # GlueVersion:
-  #   Type: String
-  #   Description: GlueVersion for the job
+  GlueVersion:
+    Type: String
+    Description: GlueVersion for the job
 
   MaxConcurrentRuns:
     Type: Number
@@ -74,7 +74,7 @@ Resources:
       Name: data-pipeline-ingest-grp04
       Description: Ingests data from s3 and writes it as a parquet file to the data lake
       ExecutionClass: FLEX
-      GlueVersion: 4.0
+      GlueVersion: !Ref GlueVersion
       MaxRetries: !Ref MaxRetries
       NumberOfWorkers: !Ref NumberOfWorkers
       Role: arn:aws:iam::854575696489:role/LabRole
