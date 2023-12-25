@@ -86,6 +86,7 @@ Resources:
 
   GlueCrawler:
     Type: AWS::Glue::Crawler
+    DependsOn: MyS3Bucket1
     Properties:
       Name: metadatacrawlergrp04
       DatabaseName: !Ref GlueDatabase
